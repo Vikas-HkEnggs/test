@@ -19,8 +19,7 @@ export default function CreateQuestion() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          title,
-          description,
+          title
         }),
       });
 
