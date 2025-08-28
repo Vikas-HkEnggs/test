@@ -125,7 +125,7 @@ export default function TeacherDashboard() {
                       <span className="text-gray-700">
                         Answers: {question.answerCount}
                       </span>
-                      <Link href={`/student/answer/${question._id}`}>
+                      <Link href={`/question-details/${question._id}`}>
                         <p className="font-medium text-indigo-600 hover:text-indigo-900">
                           View details
                         </p>

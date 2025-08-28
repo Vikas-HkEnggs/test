@@ -88,9 +88,6 @@ export default function StudentDashboard() {
                       {new Date(question.createdAt).toLocaleDateString()}
                     </div>
                     <div className="flex space-x-2">
-                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
-                        {question.answerCount} answers
-                      </span>
                       <Link href={`/student/answer/${question._id}`}>
                         <p className="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                           {question.answerCount > 0
@@ -98,6 +95,20 @@ export default function StudentDashboard() {
                             : "Be the first to answer"}
                         </p>
                       </Link>
+                    </div>
+                  </div>
+                  <div className="bg-gray-50 px-5 py-3">
+                    <div className="text-sm">
+                      <div className="flex justify-between items-center">
+                        <span className="text-gray-700">
+                          Answers: {question.answerCount}
+                        </span>
+                        <Link href={`/question-details/${question._id}`}>
+                          <p className="font-medium text-indigo-600 hover:text-indigo-900">
+                            View details
+                          </p>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
